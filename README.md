@@ -1,4 +1,5 @@
 Version tag generator.
+	This generates BASH environment variables that can be used in other scripts.
 to use:
 	copy both files into your project, edit version.profile with the initial version numbers you want to use.
 	To get a new version number, call this;
