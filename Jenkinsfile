@@ -4,14 +4,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
-                sh 'echo "source vertaginc.profile"'
-                sh 'echo "MAJOR $MAJOR MINOR $MINOR"'
+                sh 'cat vertaginc.profile'
             }
         }
         stage('Test') {
             steps {
-                sh 'echo "source vertagget.profile"'
-                sh 'echo "MAJOR $MAJOR MINOR $MINOR"'
+                sh 'cat vertagget.profile'
                 sh 'echo "testing"'
                 sh 'echo "testing"'
                 sh 'echo "testing"'
@@ -19,9 +17,8 @@ pipeline {
         }
         stage('Deploy') {
              steps {
-                sh 'echo "source vertagget.profile"'
-                sh 'echo "MAJOR $MAJOR MINOR $MINOR"'
-                sh 'echo "Deploying"'
+                sh 'cat vertagget.profile'
+                echo 'Deploying'
             }
         }
     }
