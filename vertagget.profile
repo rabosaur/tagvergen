@@ -1,5 +1,5 @@
 #!/bin/sh
-source version.profile
+. version.profile
 
 # generate full tag name
 hname=$(echo "$HOSTNAME" | tr . _ )

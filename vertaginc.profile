@@ -1,5 +1,5 @@
 #!/bin/sh
-source version.profile
+. version.profile
 
 # fix up host name
 hname=$(echo "$HOSTNAME" | tr . _ )
