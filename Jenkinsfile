@@ -5,12 +5,12 @@ pipeline {
             steps {
                 echo 'Building'
 		sh 'ls -la'
-                sh '. vertaginc.profile'
+                sh '. ./vertaginc.profile'
             }
         }
         stage('Test') {
             steps {
-                sh '. vertagget.profile'
+                sh '. ./vertagget.profile'
                 sh 'echo "testing"'
                 sh 'echo "testing"'
                 sh 'echo "testing"'
@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy') {
              steps {
-                sh '. vertagget.profile'
+                sh '. ./vertagget.profile'
                 echo 'Deploying'
             }
         }
