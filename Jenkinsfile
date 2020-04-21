@@ -5,23 +5,23 @@ pipeline {
             steps {
                 echo 'Building'
                 sh 'source vertaginc.profile'
-                echo "MAJOR $MAJOR MINOR $MINOR"
+                sh 'echo "MAJOR $MAJOR MINOR $MINOR"'
             }
         }
         stage('Test') {
             steps {
                 sh 'source vertagget.profile'
-                echo "MAJOR $MAJOR MINOR $MINOR"
-                echo 'testing'
-                echo 'testing'
-                echo 'testing'
+                sh 'echo "MAJOR $MAJOR MINOR $MINOR"'
+                sh 'echo "testing"'
+                sh 'echo "testing"'
+                sh 'echo "testing"'
             }
         }
         stage('Deploy') {
              steps {
                 sh 'source vertagget.profile'
-                echo "MAJOR $MAJOR MINOR $MINOR"
-                echo 'Deploying'
+                sh 'echo "MAJOR $MAJOR MINOR $MINOR"'
+                sh 'echo "Deploying"'
             }
         }
     }
