@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
-                sh 'cat vertaginc.profile'
+                sh 'source vertaginc.profile'
             }
         }
         stage('Test') {
