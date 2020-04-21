@@ -6,6 +6,7 @@ pipeline {
                 echo 'Building'
 		sh 'ls -la'
                 sh '. ./vertaginc.profile'
+                sh '. ./vertagget.profile'
             }
         }
         stage('Test') {
