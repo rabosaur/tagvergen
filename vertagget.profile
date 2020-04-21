@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 source version.profile
 
 # generate full tag name
