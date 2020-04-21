@@ -4,12 +4,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
-                sh 'source vertaginc.profile'
+                sh '. vertaginc.profile'
             }
         }
         stage('Test') {
             steps {
-                sh 'cat vertagget.profile'
+                sh '. vertagget.profile'
                 sh 'echo "testing"'
                 sh 'echo "testing"'
                 sh 'echo "testing"'
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Deploy') {
              steps {
-                sh 'cat vertagget.profile'
+                sh '. vertagget.profile'
                 echo 'Deploying'
             }
         }
